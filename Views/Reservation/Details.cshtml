@@ -1,0 +1,62 @@
+﻿@model ReservationDetailsViewModel;
+<style>
+    table, th, td {
+        border: 1px solid green;
+        text-align:center;
+        padding:10px;
+    }
+    td, tr {
+        text-align: center;
+    }
+
+    h4{
+        color:green;
+    }
+
+    th {
+        color: green;
+    }
+</style>
+
+<html>
+<head>
+</head>
+    <body>
+
+        <div class="row justify-content-center m-3">
+            <div class="col-sm-8">
+            <h4>We confirm that you have booked!</h4>
+            <br/>
+                <table class="text-center">
+                    <thead>
+                        <tr>
+                        <th>Chosen workout</th>
+                        <th> Day</th>
+                        <th>Members </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Model.Reservation.ReservationWorkoutName</td>
+                            <td>@Model.Reservation.ReservationDay </td>
+                            <td>@Model.Reservation.Members </td>
+                        </tr>
+                    </tbody>
+                </table>
+           
+
+                &nbsp;
+            <hr />
+                <div >
+                   <button type="button" onclick="location.href='@Url.Action("Index", "home")'" class="btn-primary">Back</button>
+                   <button type="button" onclick="location.href='@Url.Action("EditReservation", "reservation", new { id= @Model.Reservation.ReservationId })'" class="btn-primary">Edit</button>
+                   <button type="button" onclick="location.href='@Url.Action("delete", "reservation", new { id= @Model.Reservation.ReservationId })'" class="btn-primary">Delete</button>
+                </div>
+            </div>
+        </div> 
+
+    </body>
+
+</html>
+
+

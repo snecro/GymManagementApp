@@ -1,0 +1,15 @@
+﻿@model Trainer;
+
+<form asp-controller="home" asp-action="WorkoutSearch" method="post" class="mt-3">
+	 <h3>Search for an workout performed by a trainer</h3>
+			 <select asp-for="TrainerName" class="form-control" asp-items="new SelectList(ViewBag.TrainersName)">
+				</select>
+
+				 <br/>
+
+				<div class="form-group row">
+					<div class="col-sm-10">
+						<button type="submit" class="btn btn-primary">Search</button>
+					</div>
+				</div>
+</form>

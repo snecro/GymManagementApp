@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Reservation>;
+
+    <style>
+    table, th, td {
+        border: 1px solid green;
+    }
+    h1,td,tr{
+        text-align:center;
+    }
+    th{
+        color:green;
+    }
+    </style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+
+    <br />
+    <h1>Reservation History</h1>
+    <br />
+
+    <div class="container">
+        <div class="row buffer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.ReservationWorkoutName)</th>
+                        <th>@Html.DisplayNameFor(model => model.ReservationDay)</th>
+                        <th>@Html.DisplayNameFor(model => model.Members)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var reservation in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => reservation.ReservationWorkoutName)</td>
+                            <td >@Html.DisplayFor(modelItem => reservation.ReservationDay)</td>
+                            <td>@Html.DisplayFor(modelItem => reservation.Members)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            &nbsp;
+            <div class="text-center">
+                <button type="button" onclick="location.href='@Url.Action("Index", "Home")'" class="btn-primary">Go to homepage</button>
+                <button type="button" onclick="location.href='@Url.Action("CreateReservation", "Reservation")'" class="btn-primary">Create reservation</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+

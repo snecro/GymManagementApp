@@ -1,0 +1,19 @@
+﻿@model GymManagementApp.Models.Contact
+<style>
+    .addColor {
+        color:green;
+    }
+</style>
+<!DOCTYPE html>
+
+<html>
+    <body>
+    <div>
+            <p class="addColor">@Model.ContactDescription</p>
+            <p>You can reach out at the following number: <div class="addColor">@Model.ContactPhoneNumber</div></p>
+            <p>Email: <div class="addColor">@Model.ContactEmail</div></p>
+            <p>Adress: <div class="addColor">@Model.Location</div></p>
+     </div>
+    </body>
+</html>
+

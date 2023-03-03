@@ -1,0 +1,60 @@
+﻿@model HomeViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    h1.thick {
+  font-weight: bold;
+}
+h1 {
+    text-align:center;
+    color: green;
+    }
+
+.buffer { margin-top:20px; margin-bottom:20px;}
+
+</style>
+
+<div class="text-center">
+    <h1 class="thick">Welcome to the only gym you need!</h1>
+    <br/>
+    <img src="~/images/homeImage.jpg" alt="Training" />
+    <br/>
+    <br/>
+</div>
+
+<div class="text-center">
+    <button type="button" onclick="location.href='@Url.Action("WorkoutSearch", "Home")'" class="btn-primary">Search workout</button>
+    <button type="button" onclick="location.href='@Url.Action("CreateReservation", "Reservation")'" class="btn-primary">Add reservation</button>
+</div>
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+
+     <br/>
+     <h1>Group classes</h1>
+     <br/>
+    
+     <div class="container">
+        <div class="row buffer">
+
+            @foreach(Workout workout in Model.Workouts)
+            {
+                @await Html.PartialAsync("WorkoutSummary", workout)
+            }
+
+        </div>
+     </div>
+        
+    </body>
+</html>
+
+
+
+

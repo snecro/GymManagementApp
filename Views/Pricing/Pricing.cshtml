@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Pricing>
+
+    <style>
+        .space  {margin-bottom: 40px;}
+        h1,p {
+            text-align:center
+        }
+
+        .addBorder {
+             border: 3px solid green;
+        }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+
+    <br />
+    <h2>Here are our price options:</h2>
+    <br />
+
+    <div class="container">
+        <div class="row buffer">
+
+            @foreach (Pricing pricing in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-4 space" >
+                <div class="img-thumbnail addBorder">
+                    <p>@pricing.Subscription</p>
+                        <br/>
+                    <p>@pricing.PricingDescription </p>
+                        <br/>
+                    <p>Price: @pricing.Price RON</p>
+                        
+                </div>
+            </div>                
+            }
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GymManagementApp.Models.Trainer>
+
+<style>
+    .space  {margin-bottom:40px;}
+    p,h1 {text-align: center;}
+    
+</style>
+
+<h1>Our trainers are waiting for you at training</h1>
+<br/>
+<div class="container">
+    <div class="row buffer">
+        @foreach(var item in Model)
+            {
+                <div class="col-sm-4 col-lg-4 col-md-4 space" >
+                    <div class="img-thumbnail">
+                            <p><b>@item.TrainerName</b></p>
+                            @if(item.TrainerPhoto != null)
+                            {
+                                <image src="@Url.Action("GetImage","Home", new { ID= item.TrainerId})"></image>
+                            }
+                            <br/>
+                            &nbsp;
+
+                            <p>@item.TrainerDescription</p>
+                    </div>
+                </div>
+            }
+    </div>
+</div>
+
+        
+
+
+
+
+
+  
+
+

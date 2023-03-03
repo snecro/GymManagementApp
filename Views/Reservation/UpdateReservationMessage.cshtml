@@ -1,0 +1,31 @@
+﻿<style>
+	h2 { text-align:center }
+
+    .center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+
+	.centerImage {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 50%;
+	}
+</style>
+
+
+<form> 
+	<img src="~/images/functionalHiit.jpg" alt="image" class="centerImage" />
+	<br/>
+	<h2>We notify you that you have updated your reservation</h2>
+	<br/>
+	<h2>Thank you!</h2>
+	<br/>
+	
+	<div class="center">
+		<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Go to homepage</a>
+	</div>
+
+</form>

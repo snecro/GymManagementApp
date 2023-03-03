@@ -1,0 +1,16 @@
+﻿@model Workout;
+<style>
+    .space  {margin-bottom:40px;}
+</style>
+    <div class="col-sm-4 col-lg-4 col-md-4 space" >
+        <div class="img-thumbnail">
+                @if(Model.WorkoutPhoto != null)
+                {
+                    <image src="@Url.Action("GetWorkoutImage","Workout", new { ID= Model.WorkoutId})"></image>
+                }
+                <br/>
+                <p>@Model.WorkoutName </p>
+                <p>@Model.WorkoutDescription</p>
+        </div>
+    </div>
+  

@@ -1,0 +1,26 @@
+﻿@model Workout;
+
+<style>
+    .header {
+        text-align:center
+    }
+	p {text-align:center}
+    h2 {text-align:center}
+</style>
+
+<h2 class="header">This is the type of training depending on the chosen trainer</h2>
+<p> <b> @Model.WorkoutName </b></p>
+
+<br/>
+<h2>Benefits of this type of training:</h2>
+<br/>
+<p><b>@Model.WorkoutDescription</b></p>
+<br/>
+
+<div class="text-center">
+    <button type="button" onclick="location.href='@Url.Action("WorkoutSearch", "Home")'" class="btn-primary">Back to search workout</button>
+    <button type="button" onclick="location.href='@Url.Action("Index", "home")'" class="btn-primary">Back to homepage</button>
+</div>
+
+
+

@@ -1,0 +1,17 @@
+﻿<style>
+	p{
+		font-family:'Times New Roman'
+	}
+	h3{
+		color:blue;
+	}
+</style>
+
+<p>There are no existing reservations for you.</p>
+<br/>
+<h3>Come and join us in a class workout!</h3>
+<br />
+<div class="text-center">
+	<button type="button" onclick="location.href='@Url.Action("CreateReservation", "reservation")'" class="btn-primary">Create a reservation</button>
+	<button type="button" onclick="location.href='@Url.Action("Index", "Home")'" class="btn-primary">Go to homepage</button>
+</div>

@@ -1,0 +1,77 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<style>
+		table, th, td {
+			 border: 3px solid green;
+			 text-align:center;
+		}
+		h1{
+			text-align:center;
+		}
+
+		th{
+		background-color: goldenrod;
+		}
+		.addColor{
+			background-color:goldenrod;
+		}
+	</style>
+	<head>
+		<title> Time schedule</title>
+	</head>
+	<body>
+		<h1>Gym time schedule</h1>
+		<p><b>From Monday to Friday:</b> 8:00 - 22:00 </p>
+		<p><b>Saturday:</b 9:00 - 21:00 </p>
+		<p><b>Sunday:</b> 9:00 - 20:00 </p>
+		<br/>
+		<table>
+			<tr>
+				<th>Hour/Day</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+				<th>Sunday</th>
+			</tr>
+			<tr>
+				<td class="addColor">12:00 - 13:00</td>
+				<td>Yoga</td>
+				<td>Pilates</td>
+				<td>Army workout</td>
+				<td>Functional HIIT</td>
+				<td>Kangoo Jumps</td>
+				<td>Yoga</td>
+				<td>Pilates</td>
+			</tr>
+			<tr>
+				<td class="addColor">17:00 - 18:00</td>
+				<td>Functional HIIT</td>
+				<td>Yoga</td>
+				<td>Pilates</td>
+				<td>Army workout</td>
+				<td>Pilates</td>
+				<td>Kangoo Jumps</td>
+				<td>Yoga</td>
+			</tr>
+			<tr>
+				<td class="addColor">18:00 - 19:00</td>
+				<td>Kangoo Jumps</td>
+				<td>Army workout</td>
+				<td>Functional HIIT</td>
+				<td>Pilates</td>
+				<td>Army workout</td>
+				<td>Pilates</td>
+				<td>Functional HIIT</td>
+			</tr>
+		</table>
+		<br/>
+		<div class="text-center">
+		<button type="button" onclick="location.href='@Url.Action("Index", "home")'" class="btn-primary">Back to homepage</button>
+		<button type="button" onclick="location.href='@Url.Action("CreateReservation", "reservation")'" class="btn-primary">Create a reservation</button>
+		</div>
+	</body>
+</html>
